@@ -1,0 +1,62 @@
+body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; color: #333; }
+.app-container { max-width: 900px; margin: 0 auto; }
+.hidden { display: none !important; }
+
+.auth-box, .blog-box, .editor-panel, .post-card, .widget {
+    background: white; padding: 20px; border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 20px;
+}
+
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e4e6eb; padding-bottom: 15px; margin-bottom: 20px; }
+.user-profile { display: flex; align-items: center; gap: 12px; font-weight: bold; }
+.btn-link { background: none; border: none; color: #1877f2; padding: 0; cursor: pointer; font-size: 0.85rem; font-weight: normal; }
+.btn-link:hover { text-decoration: underline; }
+
+.avatar { width: 40px; height: 40px; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; text-transform: uppercase; flex-shrink: 0; }
+.avatar-select-label { margin-top: 10px; font-size: 0.9rem; color: #555; }
+.avatar-picker { display: flex; gap: 10px; margin: 5px 0 15px 0; }
+.avatar-picker input { display: none; }
+.avatar-picker span { display: block; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; }
+.avatar-picker input:checked + span { border-color: #333; transform: scale(1.1); }
+
+.main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+@media (max-width: 768px) { .main-layout { grid-template-columns: 1fr; } }
+
+.feed-tabs { display: flex; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid #ccd0d5; padding-bottom: 10px; }
+.tab-btn { background: none; color: #65676b; border: none; padding: 8px 16px; font-size: 1rem; cursor: pointer; border-radius: 6px; }
+.tab-btn.active { background: #e7f3ff; color: #1877f2; font-weight: bold; }
+
+input, textarea, select { width: 100%; padding: 10px; margin: 6px 0; border: 1px solid #ccd0d5; border-radius: 6px; box-sizing: border-box; }
+button { background: #1877f2; color: white; border: none; padding: 10px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+button:hover { background: #166fe5; }
+.btn-secondary { background: #e4e6eb; color: #4b4f56; margin-left: 5px; }
+.btn-danger { background: #f02849; color: white; }
+
+.post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.post-meta h4 { margin: 0; font-size: 1rem; }
+.post-meta span { font-size: 0.8rem; color: #65676b; }
+.post-actions { display: flex; gap: 10px; border-top: 1px solid #eee; padding-top: 10px; margin-top: 12px; }
+.author-actions { margin-left: auto; }
+
+.suggestion-item { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.suggestion-info { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 600; }
+.btn-sm { padding: 5px 10px; font-size: 0.8rem; }
+
+.comments-section { background: #f7f8fa; padding: 12px; border-radius: 8px; margin-top: 12px; }
+.comment { font-size: 0.85rem; padding: 5px 0; border-bottom: 1px solid #e4e6eb; display: flex; gap: 8px; align-items: center; }
+.comment .avatar { width: 24px; height: 24px; font-size: 0.7rem; }
+.comment-text { background: #eee; padding: 6px 10px; border-radius: 12px; }
+.comment-form { display: flex; gap: 8px; margin-top: 10px; }
+.comment-form input { margin: 0; padding: 6px; }
+
+/* Новые стили для тегов и приватности */
+.tags-cloud-container { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; padding: 10px; background: #ffffff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+.tag-badge { background: #e4e6eb; color: #050505; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; cursor: pointer; transition: background 0.2s; user-select: none; }
+.tag-badge:hover { background: #d8dadf; }
+.tag-badge.active-filter { background: #1877f2; color: white; font-weight: bold; }
+.post-tags-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.post-tag { color: #1877f2; font-size: 0.9rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+.post-tag:hover { text-decoration: underline; }
+.locked-content { background: #f8f9fa; border: 1px dashed #ccd0d5; padding: 15px; border-radius: 6px; text-align: center; color: #65676b; margin-bottom: 15px; }
+.requests-panel { background: #fff3cd; border: 1px solid #ffeeba; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 0.9rem; }
+.request-user-item { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; }
